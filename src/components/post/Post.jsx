@@ -47,23 +47,13 @@ export default function Post({ post}) {
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   }
-  // const handleClick=()=>{
-  //   document.getElementById("hello").scrollIntoView()
-  // }
+  
   const handleDelete=async (e)=>{
     e.preventDefault();
-    // const flag=alert("Do you want to delete this post? ")
-    // if(flag){
-
       await axios.delete(`https://backend-gwa2.onrender.com/${post._id}/deletePost`,{userId:id});
-      // props();
+      
       alert("Post deleted");
-      // window.parent.location = window.parent.location.href;
-    // }else{
-      // return;
-    // }
   }
-  // params.id?`/profile/${post.userId}`
   return (
     <div className="post">
       <div className="postWrapper">

@@ -10,6 +10,7 @@ export default function Share() {
   const id=JSON.parse(localStorage.getItem('id'));
   const user=JSON.parse(localStorage.getItem('loginUser'));
   const handlePost=(e)=>{
+    e.preventDefault();
     setPostshare(e.target.value);
   }
   const handleClick=async (e)=>{
@@ -35,9 +36,7 @@ export default function Share() {
     const res=await axios.post("https://backend-gwa2.onrender.com/upload/post",newPost);
     if(res.status===200){
       setPostshare("");
-
       alert("Post uploaded successfully");
-      // window.parent.location = window.parent.location.href;
     }
    
     }
