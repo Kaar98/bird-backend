@@ -58,7 +58,7 @@ export default function Post({ post}) {
       await axios.delete(`https://backend-gwa2.onrender.com/${post._id}/deletePost`,{userId:id});
       // props();
       alert("Post deleted");
-      window.parent.location = window.parent.location.href;
+      // window.parent.location = window.parent.location.href;
     // }else{
       // return;
     // }
