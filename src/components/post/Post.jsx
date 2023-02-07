@@ -47,9 +47,9 @@ export default function Post({ post}) {
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   }
-  const handleClick=()=>{
-    document.getElementById("hello").scrollIntoView()
-  }
+  // const handleClick=()=>{
+  //   document.getElementById("hello").scrollIntoView()
+  // }
   const handleDelete=async (e)=>{
     e.preventDefault();
     // const flag=alert("Do you want to delete this post? ")
@@ -69,7 +69,7 @@ export default function Post({ post}) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-          <Link to={`/profile/${post.userId}`} onClick={handleClick}>
+          <Link to={`/profile/${post.userId}`} >
             <img
               className="postProfileImg"
               crossorigin="anonymous"

@@ -37,7 +37,7 @@ export default function Share() {
       setPostshare("");
 
       alert("Post uploaded successfully");
-      window.parent.location = window.parent.location.href;
+      // window.parent.location = window.parent.location.href;
     }
    
     }
