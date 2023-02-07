@@ -63,12 +63,13 @@ export default function Post({ post}) {
       // return;
     // }
   }
+  // params.id?`/profile/${post.userId}`
   return (
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-          <Link to={params.id?`/profile/${post.userId}`:`/profile/${post.userId}`} onClick={handleClick}>
+          <Link to={`/profile/${post.userId}`} onClick={handleClick}>
             <img
               className="postProfileImg"
               crossorigin="anonymous"
