@@ -32,7 +32,7 @@ export default function Register() {
        "cpassword":user.cpassword
      });
      
-     let response = await fetch("http://localhost:8000/register", { 
+     let response = await fetch("https://backend-gwa2.onrender.com/register", { 
        method: "POST",
        body: bodyContent,
        headers: headersList

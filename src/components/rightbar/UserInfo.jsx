@@ -16,7 +16,7 @@ const UserInfo = () => {
     }
     const handleClick=async (e)=>{
         e.preventDefault();
-        await axios.put(`http://localhost:8000/${id}/update`,{city:info.city,from:info.from,relationships:info.relationships})
+        await axios.put(`https://backend-gwa2.onrender.com/${id}/update`,{city:info.city,from:info.from,relationships:info.relationships})
         navigate(`/profile/${id}`);
     }
   return (

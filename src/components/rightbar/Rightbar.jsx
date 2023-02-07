@@ -24,7 +24,7 @@ export default function Rightbar({profile}) {
   
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`http://localhost:8000/${params.id}/getUser`);
+      const res = await axios.get(`https://backend-gwa2.onrender.com/${params.id}/getUser`);
       setUser(res.data);
     };
     fetchUser();
@@ -42,11 +42,11 @@ export default function Rightbar({profile}) {
   const handleClick=async ()=>{
     try{
     if(toggle){
-      await axios.put(`http://localhost:8000/${params.id}/unfollow`,{userId:id});
+      await axios.put(`https://backend-gwa2.onrender.com/${params.id}/unfollow`,{userId:id});
     }else{
-      await axios.put(`http://localhost:8000/${params.id}/follow`,{userId:id});
+      await axios.put(`https://backend-gwa2.onrender.com/${params.id}/follow`,{userId:id});
     }
-    const res2=await axios.get(`http://localhost:8000/${id}/getUser`);
+    const res2=await axios.get(`https://backend-gwa2.onrender.com/${id}/getUser`);
     localStorage.setItem('loginUser',JSON.stringify(res2.data));
     setToggle(!toggle);
   }catch(err){}

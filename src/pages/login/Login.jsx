@@ -31,7 +31,7 @@ export default function Login() {
        
      });
      
-     let response = await fetch("http://localhost:8000/login", { 
+     let response = await fetch("https://backend-gwa2.onrender.com/login", { 
        method: "POST",
        body: bodyContent,
        headers: headersList
@@ -49,7 +49,7 @@ export default function Login() {
       // console.log(response.data);
       localStorage.setItem('id',data);
       const id1=JSON.parse(localStorage.getItem('id'));
-      const res = await axios.get(`http://localhost:8000/${id1}/getUser`);
+      const res = await axios.get(`https://backend-gwa2.onrender.com/${id1}/getUser`);
       console.log(res.data);
       localStorage.setItem('loginUser',JSON.stringify(res.data));
       // console.log(localStorage.getItem('user'));

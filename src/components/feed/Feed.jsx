@@ -16,7 +16,7 @@ export default function Feed() {
   
   // console.log(currUser);
   const fetchPosts=async ()=>{
-    const res=await axios.get(`http://localhost:8000/timeline/${id}`);
+    const res=await axios.get(`https://backend-gwa2.onrender.com/timeline/${id}`);
     
     setPosts(
       res.data.sort((p1, p2) => {

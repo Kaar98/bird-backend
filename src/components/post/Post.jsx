@@ -15,7 +15,7 @@ export default function Post({ post}) {
   const id=JSON.parse(localStorage.getItem('id'));
   useEffect(()=>{
     const fetchUser=async ()=>{
-      const res=await axios.get(`http://localhost:8000/${post.userId}/getUser`);
+      const res=await axios.get(`https://backend-gwa2.onrender.com/${post.userId}/getUser`);
 
        setUser(res.data);
        console.log(post.image);
@@ -42,7 +42,7 @@ export default function Post({ post}) {
     // setLike(isLiked ? like - 1 : like + 1);
     // setIsLiked(!isLiked);
     try{
-      axios.put(`http://localhost:8000/${post._id}/likeDisPost`,{userId:id});
+      axios.put(`https://backend-gwa2.onrender.com/${post._id}/likeDisPost`,{userId:id});
     }catch(err){};
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
@@ -55,7 +55,7 @@ export default function Post({ post}) {
     // const flag=alert("Do you want to delete this post? ")
     // if(flag){
 
-      await axios.delete(`http://localhost:8000/${post._id}/deletePost`,{userId:id});
+      await axios.delete(`https://backend-gwa2.onrender.com/${post._id}/deletePost`,{userId:id});
       // props();
       alert("Post deleted");
       window.parent.location = window.parent.location.href;

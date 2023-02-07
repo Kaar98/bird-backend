@@ -21,9 +21,9 @@ export default function Profile() {
   const id=JSON.parse(localStorage.getItem('id'));
   useEffect(()=>{
     const fetchUser=async ()=>{
-      const res=await axios.get(`http://localhost:8000/${params.id}/getUser`);
-      const res1=await axios.get(`http://localhost:8000/userPosts/${params.id}`);
-      const res2=await axios.get(`http://localhost:8000/${id}/getUser`);
+      const res=await axios.get(`https://backend-gwa2.onrender.com/${params.id}/getUser`);
+      const res1=await axios.get(`https://backend-gwa2.onrender.com/userPosts/${params.id}`);
+      const res2=await axios.get(`https://backend-gwa2.onrender.com/${id}/getUser`);
       setPosts(res1.data.reverse());
        setUser(res.data);
        setCurr(res2.data);

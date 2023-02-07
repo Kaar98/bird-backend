@@ -29,10 +29,10 @@ export default function Share() {
       newPost.image = fileName;
       console.log(newPost);
       try {
-        await axios.post("http://localhost:8000/uploadImage", data);
+        await axios.post("https://backend-gwa2.onrender.com/uploadImage", data);
       } catch (err) {}
     }
-    const res=await axios.post("http://localhost:8000/upload/post",newPost);
+    const res=await axios.post("https://backend-gwa2.onrender.com/upload/post",newPost);
     if(res.status===200){
       setPostshare("");
 

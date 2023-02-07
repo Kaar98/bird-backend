@@ -24,7 +24,7 @@ export default function Sidebar() {
     // let temp;
     const handleFriends = async (e) => {
       // e.preventDefault();
-      temp=await axios.get(`http://localhost:8000/allUsers`);
+      temp=await axios.get(`https://backend-gwa2.onrender.com/allUsers`);
       // console.log(temp.data);
       setusers(temp.data);
       // console.log(temp.data);

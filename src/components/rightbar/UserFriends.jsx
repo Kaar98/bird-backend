@@ -9,7 +9,7 @@ const UserFriends = ({idfr}) => {
   const [user,setUser]=useState({});
   useEffect(()=>{
     const fetchUser=async ()=>{
-      const res=await axios.get(`http://localhost:8000/${idfr}/getUser`);
+      const res=await axios.get(`https://backend-gwa2.onrender.com/${idfr}/getUser`);
 
        setUser(res.data);
     }
