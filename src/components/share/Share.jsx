@@ -1,11 +1,14 @@
 import "./share.css";
 import {PermMedia, Label,Room, EmojiEmotions,Cancel,} from "@material-ui/icons"
 import { useState } from "react";
+
+import {useNavigate} from 'react-router-dom'
 import axios from "axios";
 
 export default function Share() {
   const [postshare,setPostshare]=useState("");
   const [file,setFile]=useState(null);
+  const navigate=useNavigate();
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const id=JSON.parse(localStorage.getItem('id'));
   const user=JSON.parse(localStorage.getItem('loginUser'));
@@ -37,6 +40,7 @@ export default function Share() {
     if(res.status===200){
       setPostshare("");
       alert("Post uploaded successfully");
+      navigate(`/profile/${id}`);
     }
    
     }
