@@ -41,7 +41,7 @@ export default function Profile() {
   return (
     <>
       <Topbar />
-      <div className="profile">
+      <div className="profile" id="hello">
         <Sidebar />
         <div className="profileRight">
           <div className="profileRightTop">

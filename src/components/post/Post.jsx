@@ -53,6 +53,8 @@ export default function Post({ post}) {
       await axios.delete(`https://backend-gwa2.onrender.com/${post._id}/deletePost`,{userId:id});
       
       alert("Post deleted");
+      let element=document.getElementById("hello");
+      element.scrollIntoView();
   }
   return (
     <div className="post">
